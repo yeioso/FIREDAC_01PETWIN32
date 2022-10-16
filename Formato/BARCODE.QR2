@@ -1,0 +1,268 @@
+object Header: TComponentFileHeader
+  UserData = {}
+end
+object RuntimeDatamodule: TRuntimeDatamodule
+  OldCreateOrder = False
+  Height = 0
+  Width = 0
+  object PRODUCTO: TADOQuery
+    Active = True
+    Connection = FrRep_Designer.DBConexion
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT TOP 1 * FROM PRODUCTO')
+    object TStringField
+      FieldName = 'CODIGO_BODEGA'
+      Size = 2
+    end
+    object TStringField
+      FieldName = 'CODIGO_LINEA'
+      Size = 2
+    end
+    object TStringField
+      FieldName = 'CODIGO_GRUPO'
+      Size = 2
+    end
+    object TStringField
+      FieldName = 'CODIGO_SUBGRUPO'
+      Size = 2
+    end
+    object TStringField
+      FieldName = 'CODIGO_PRODUCTO'
+    end
+    object TStringField
+      FieldName = 'CODIGO_BARRAS'
+      Size = 100
+    end
+    object TStringField
+      FieldName = 'NOMBRE'
+      Size = 100
+    end
+    object TFloatField
+      FieldName = 'VALOR_COMPRA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_VENTA'
+    end
+    object TStringField
+      FieldName = 'ID_PREPARACION'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_RECETA'
+      Size = 1
+    end
+    object TFloatField
+      FieldName = 'COSTO_CALCULADO'
+    end
+    object TFloatField
+      FieldName = 'PORC_UTILIDAD'
+    end
+    object TFloatField
+      FieldName = 'VALOR_PROPUESTO'
+    end
+    object TStringField
+      FieldName = 'IMPUESTO_COMPRA'
+      Size = 4
+    end
+    object TStringField
+      FieldName = 'IMPUESTO_VENTA'
+      Size = 4
+    end
+    object TStringField
+      FieldName = 'PRODUCTO_PADRE'
+    end
+    object TFloatField
+      FieldName = 'NUMERO_UNIDADES'
+    end
+    object TFloatField
+      FieldName = 'STOCK_MINIMO'
+    end
+    object TFloatField
+      FieldName = 'STOCK_MAXIMO'
+    end
+    object TFloatField
+      FieldName = 'CANTIDAD'
+    end
+    object TBlobField
+      FieldName = 'GRAFICO'
+    end
+    object TMemoField
+      FieldName = 'DESCRIPCION'
+      BlobType = ftMemo
+    end
+    object TStringField
+      FieldName = 'PUC_DEBITO'
+    end
+    object TStringField
+      FieldName = 'PUC_CREDITO'
+    end
+    object TStringField
+      FieldName = 'CCOSTO_DEBITO'
+    end
+    object TStringField
+      FieldName = 'CCOSTO_CREDITO'
+    end
+    object TStringField
+      FieldName = 'CPMTE_DEBITO'
+      Size = 4
+    end
+    object TStringField
+      FieldName = 'CPMTE_CREDITO'
+      Size = 4
+    end
+    object TIntegerField
+      FieldName = 'TAG_INFO'
+    end
+    object TStringField
+      FieldName = 'ID_FACTURABLE'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_INSUMO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'FECHA_VENCIMIENTO'
+      Size = 10
+    end
+    object TFloatField
+      FieldName = 'MARGEN_UTILIDAD'
+    end
+    object TStringField
+      FieldName = 'ID_FECHA_VENCIMIENTO'
+      Size = 1
+    end
+    object TBlobField
+      FieldName = 'IMAGE_BARCODE'
+    end
+    object TStringField
+      FieldName = 'ID_IMPRIMIR_BARCODE'
+      Size = 1
+    end
+  end
+  object PRODUCTODatasource: TDataSource
+    DataSet = PRODUCTO
+  end
+end
+object QuickReport: TDesignQuickReport
+  DataSet = RuntimeDatamodule.PRODUCTO
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Style = []
+  Functions.Strings = (
+    'PAGENUMBER'
+    'COLUMNNUMBER'
+    'REPORTTITLE')
+  Functions.DATA = (
+    '0'
+    '0'
+    #39#39)
+  Options = [FirstPageHeader, LastPageFooter]
+  Page.Columns = 1
+  Page.Orientation = poPortrait
+  Page.PaperSize = Custom
+  Page.Ruler = False
+  Page.Continuous = False
+  Page.Values = (
+    100.012500000000000000
+    793.750000000000000000
+    100.012500000000000000
+    1079.500000000000000000
+    100.012500000000000000
+    100.012500000000000000
+    0.000000000000000000)
+  PrinterSettings.Copies = 1
+  PrinterSettings.OutputBin = First
+  PrinterSettings.Duplex = False
+  PrinterSettings.FirstPage = 0
+  PrinterSettings.LastPage = 0
+  PrinterSettings.UseStandardprinter = False
+  PrinterSettings.UseCustomBinCode = False
+  PrinterSettings.CustomBinCode = 0
+  PrinterSettings.ExtendedDuplex = 0
+  PrinterSettings.UseCustomPaperCode = False
+  PrinterSettings.CustomPaperCode = 0
+  PrinterSettings.PrintMetaFile = False
+  PrinterSettings.MemoryLimit = 1000000
+  PrinterSettings.PrintQuality = 0
+  PrinterSettings.Collate = 0
+  PrinterSettings.ColorOption = 0
+  PrintIfEmpty = True
+  SnapToGrid = True
+  Units = Pixels
+  Zoom = 100
+  PrevFormStyle = fsNormal
+  PreviewInitialState = wsMaximized
+  PrevInitialZoom = qrZoomToFit
+  PreviewDefaultSaveType = stPDF
+  PreviewLeft = 0
+  PreviewTop = 0
+  LabelSettings.FirstLabel = 0
+  LabelSettings.LabelCount = 0
+  PrepareAutomatically = False
+  DesignBackgroundDX = 0
+  DesignBackgroundDY = 0
+  RulerPanel = ReportDesignerForm.RulerPanel1
+  object BAND2: TQRDesignBand
+    Left = 38
+    Top = 38
+    Width = 332
+    Height = 40
+    AlignToBottom = False
+    Color = clWhite
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      105.833333333333300000
+      878.416666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbTitle
+    EditorEnabled = True
+    BandNum = 0
+  end
+  object BAND3: TQRDesignBand
+    Left = 38
+    Top = 78
+    Width = 332
+    Height = 144
+    AlignToBottom = False
+    Color = clWhite
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      381.000000000000000000
+      878.416666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbDetail
+    EditorEnabled = True
+    BandNum = 0
+    object DBImage1: TQRDesignDBImage
+      Left = 13
+      Top = 9
+      Width = 300
+      Height = 124
+      Size.Values = (
+        328.083333333333300000
+        34.395833333333330000
+        23.812500000000000000
+        793.750000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      DataField = 'IMAGE_BARCODE'
+      DataSet = RuntimeDatamodule.PRODUCTO
+      Stretch = True
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+    end
+  end
+end
+object TPropertyAddons
+end

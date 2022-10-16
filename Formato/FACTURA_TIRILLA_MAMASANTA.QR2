@@ -1,0 +1,2093 @@
+object Header: TComponentFileHeader
+  UserData = {}
+end
+object RuntimeDatamodule: TRuntimeDatamodule
+  OldCreateOrder = False
+  Height = 0
+  Width = 0
+  object MASTER: TADOQuery
+    Active = True
+    Connection = FrRep_Designer.DBConexion
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM DOCUMENTO_ENC_AUX')
+    object MASTERNOMBRE_TERCERO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NOMBRE_TERCERO'
+      Size = 100
+      Calculated = True
+    end
+    object MASTERTELEFONO_TERCERO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TELEFONO_TERCERO'
+      Size = 50
+      Calculated = True
+    end
+    object MASTERMUNICIPIO_TERCERO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'MUNICIPIO_TERCERO'
+      Size = 50
+      Calculated = True
+    end
+    object MASTERDIRECCION_TERCERO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'DIRECCION_TERCERO'
+      Size = 100
+      Calculated = True
+    end
+    object MASTERNOMBRE_VENDEDOR: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NOMBRE_VENDEDOR'
+      Size = 100
+      Calculated = True
+    end
+    object MASTEREMPRESA_ACTUAL: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'EMPRESA_ACTUAL'
+      Size = 100
+      Calculated = True
+    end
+    object TStringField
+      FieldName = 'DATAKEY'
+    end
+    object TStringField
+      FieldName = 'TIPO_CAPTURA'
+      Size = 3
+    end
+    object TStringField
+      FieldName = 'TIPO_DOCUMENTO'
+      Size = 3
+    end
+    object TStringField
+      FieldName = 'NUMERO_DOCUMENTO'
+    end
+    object TStringField
+      FieldName = 'ORIGEN_REFERENCIA'
+      Size = 3
+    end
+    object TStringField
+      FieldName = 'DOCUMENTO_REFERENCIA'
+    end
+    object TStringField
+      FieldName = 'CODIGO_VENDEDOR'
+    end
+    object TStringField
+      FieldName = 'CODIGO_TERCERO'
+    end
+    object TStringField
+      FieldName = 'CODIGO_TERCERO_LP'
+      Size = 2
+    end
+    object TStringField
+      FieldName = 'CODIGO_SINONIMO'
+    end
+    object TStringField
+      FieldName = 'CODIGO_BASE'
+      Size = 4
+    end
+    object TStringField
+      FieldName = 'NOMBRE'
+      Size = 100
+    end
+    object TStringField
+      FieldName = 'GARANTIA'
+      Size = 100
+    end
+    object TStringField
+      FieldName = 'FECHA_DOCUMENTO'
+      Size = 10
+    end
+    object TFloatField
+      FieldName = 'PLAZO'
+    end
+    object TStringField
+      FieldName = 'FECHA_VENCIMIENTO'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'CODIGO_ESTACION'
+      Size = 100
+    end
+    object TMemoField
+      FieldName = 'DIRECCION'
+      BlobType = ftMemo
+    end
+    object TMemoField
+      FieldName = 'OBSERVACION'
+      BlobType = ftMemo
+    end
+    object TMemoField
+      FieldName = 'ENCABEZADO'
+      BlobType = ftMemo
+    end
+    object TMemoField
+      FieldName = 'PIE_PAGINA'
+      BlobType = ftMemo
+    end
+    object TStringField
+      FieldName = 'CODIGO_ESPACIO'
+      Size = 4
+    end
+    object TStringField
+      FieldName = 'CODIGO_USUARIO'
+    end
+    object TStringField
+      FieldName = 'FECHA'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'HORA'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'ID_PREIMPRESO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_IMPRESO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_ANULADO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_ACTUALIZADO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_DESCARGADO'
+      Size = 1
+    end
+    object TFloatField
+      FieldName = 'NUMERO_PERSONAS'
+    end
+    object TFloatField
+      FieldName = 'VALOR_SUBTOTAL'
+    end
+    object TFloatField
+      FieldName = 'PORCENTAJE_LP'
+    end
+    object TFloatField
+      FieldName = 'BASE_IVA'
+    end
+    object TFloatField
+      FieldName = 'BASE_RETEIVA'
+    end
+    object TFloatField
+      FieldName = 'BASE_RETEFUENTE'
+    end
+    object TFloatField
+      FieldName = 'BASE_ICA'
+    end
+    object TFloatField
+      FieldName = 'BASE_IMPCONSUMO'
+    end
+    object TFloatField
+      FieldName = 'BASE_SERVICIO'
+    end
+    object TFloatField
+      FieldName = 'BASE_CREE'
+    end
+    object TFloatField
+      FieldName = 'BASE_DESCUENTO'
+    end
+    object TFloatField
+      FieldName = 'BASE_INTERES'
+    end
+    object TFloatField
+      FieldName = 'VALOR_IVA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_RETEIVA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_RETEFUENTE'
+    end
+    object TFloatField
+      FieldName = 'VALOR_ICA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_IMPCONSUMO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_DESCUENTO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_SERVICIO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_CREE'
+    end
+    object TFloatField
+      FieldName = 'VALOR_INTERES'
+    end
+    object TFloatField
+      FieldName = 'VALOR_TOTAL'
+    end
+    object TFloatField
+      FieldName = 'VALOR_TRM'
+    end
+    object TFloatField
+      FieldName = 'TOTAL_TRM'
+    end
+    object TFloatField
+      FieldName = 'VALOR_DIVIDIDO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_PAGADO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_VUELTO'
+    end
+    object TFloatField
+      FieldName = 'EFE'
+    end
+    object TFloatField
+      FieldName = 'EFE_TRM'
+    end
+    object TFloatField
+      FieldName = 'TDD'
+    end
+    object TFloatField
+      FieldName = 'TDD_TRM'
+    end
+    object TStringField
+      FieldName = 'TDD_ENTIDAD'
+    end
+    object TFloatField
+      FieldName = 'TDC'
+    end
+    object TFloatField
+      FieldName = 'TDC_TRM'
+    end
+    object TStringField
+      FieldName = 'TDC_ENTIDAD'
+    end
+    object TFloatField
+      FieldName = 'CHE'
+    end
+    object TFloatField
+      FieldName = 'CHE_TRM'
+    end
+    object TStringField
+      FieldName = 'CHE_ENTIDAD'
+    end
+    object TFloatField
+      FieldName = 'SDX'
+    end
+    object TFloatField
+      FieldName = 'SDX_TRM'
+    end
+    object TFloatField
+      FieldName = 'COR'
+    end
+    object TFloatField
+      FieldName = 'COR_TRM'
+    end
+    object TFloatField
+      FieldName = 'CAR'
+    end
+    object TFloatField
+      FieldName = 'CAR_PAGADA'
+    end
+    object TFloatField
+      FieldName = 'CAR_TRM'
+    end
+    object TFloatField
+      FieldName = 'CAR_TRM_PAGADA'
+    end
+    object TFloatField
+      FieldName = 'CAR_PLAZO'
+    end
+    object TStringField
+      FieldName = 'CAR_FECHAINI'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'CAR_FECHAFIN'
+      Size = 10
+    end
+    object TFloatField
+      FieldName = 'CAR_DIAS_VENCIDOS'
+    end
+    object TStringField
+      FieldName = 'CAR_EDAD'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'CAR_ESTADO_CARTERA'
+      Size = 10
+    end
+    object TIntegerField
+      FieldName = 'TAG_INFO'
+    end
+    object TStringField
+      FieldName = 'TDD_VAUCHE'
+    end
+    object TStringField
+      FieldName = 'TDC_VAUCHE'
+    end
+    object TStringField
+      FieldName = 'CUFE'
+      Size = 255
+    end
+    object TBlobField
+      FieldName = 'QR'
+    end
+    object TFloatField
+      FieldName = 'TRANSF'
+    end
+    object TFloatField
+      FieldName = 'TRANSF_TRM'
+    end
+    object TStringField
+      FieldName = 'TRANSF_ENTIDAD'
+    end
+    object TStringField
+      FieldName = 'TRANSF_VAUCHE'
+    end
+    object TFloatField
+      FieldName = 'SISTEMA_CREDITO'
+    end
+    object TFloatField
+      FieldName = 'SISTEMA_CREDITO_TRM'
+    end
+    object TMemoField
+      FieldName = 'DISCRIMINADOS'
+      BlobType = ftMemo
+    end
+    object TStringField
+      FieldName = 'DOCUMENTO_COMANDA'
+    end
+    object MASTERNOMBRE_ESPACIO: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'NOMBRE_ESPACIO'
+      Size = 255
+      Calculated = True
+    end
+    object TStringField
+      FieldName = 'CODIGO_DOCUMENTO_ADM'
+      Visible = False
+      Size = 4
+    end
+    object TFloatField
+      FieldName = 'VALOR_BASE'
+      Visible = False
+    end
+    object TFloatField
+      FieldName = 'VALOR_NETO'
+      Visible = False
+    end
+    object TStringField
+      FieldName = 'DATAKEY_REFERENCIA'
+      Visible = False
+    end
+    object TFloatField
+      FieldName = 'SALDO_PENDIENTE'
+      Visible = False
+    end
+    object TMemoField
+      FieldName = 'INFO_COMANDA'
+      Visible = False
+      BlobType = ftMemo
+    end
+    object TFloatField
+      FieldName = 'VALOR_DOMICILIO'
+      Visible = False
+    end
+    object TFloatField
+      FieldName = 'TOTAL_CON_DOMICILIO'
+      Visible = False
+    end
+  end
+  object MASTERDatasource: TDataSource
+    DataSet = MASTER
+  end
+  object DETAIL: TADOQuery
+    Active = True
+    Connection = FrRep_Designer.DBConexion
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM DOCUMENTO_DET_AUX')
+    object TStringField
+      FieldName = 'DATAKEY'
+    end
+    object TStringField
+      FieldName = 'CONSECUTIVO'
+      Size = 3
+    end
+    object TStringField
+      FieldName = 'TIPO_DOCUMENTO'
+      Size = 3
+    end
+    object TStringField
+      FieldName = 'NUMERO_DOCUMENTO'
+    end
+    object TStringField
+      FieldName = 'CODIGO_BARRAS'
+      Size = 100
+    end
+    object TStringField
+      FieldName = 'CODIGO_PRODUCTO'
+    end
+    object TStringField
+      FieldName = 'CODIGO_PRODUCTO_LP'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'NOMBRE'
+      Size = 100
+    end
+    object TBlobField
+      FieldName = 'OBSERVACION'
+    end
+    object TStringField
+      FieldName = 'FECHA_TRM'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'CODIGO_USUARIO'
+    end
+    object TStringField
+      FieldName = 'FECHA'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'HORA'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'TIPO_REFERENCIA'
+      Size = 3
+    end
+    object TStringField
+      FieldName = 'NUMERO_REFERENCIA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_REFERENCIA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_LP_ENC'
+    end
+    object TFloatField
+      FieldName = 'VALOR_LP_DET'
+    end
+    object TFloatField
+      FieldName = 'PORC_IVA'
+    end
+    object TFloatField
+      FieldName = 'PORC_RETEIVA'
+    end
+    object TFloatField
+      FieldName = 'PORC_RETEFUENTE'
+    end
+    object TFloatField
+      FieldName = 'PORC_ICA'
+    end
+    object TFloatField
+      FieldName = 'PORC_IMPCONSUMO'
+    end
+    object TFloatField
+      FieldName = 'PORC_SERVICIO'
+    end
+    object TFloatField
+      FieldName = 'PORC_DESCUENTO'
+    end
+    object TFloatField
+      FieldName = 'PORC_CREE'
+    end
+    object TFloatField
+      FieldName = 'PORC_INTERES'
+    end
+    object TFloatField
+      FieldName = 'CANTIDAD'
+    end
+    object TFloatField
+      FieldName = 'VALOR_ORIGINAL'
+    end
+    object TFloatField
+      FieldName = 'VALOR_CALCULADO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_UNITARIO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_FLETE'
+    end
+    object TFloatField
+      FieldName = 'VALOR_IVA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_RETEIVA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_RETEFUENTE'
+    end
+    object TFloatField
+      FieldName = 'VALOR_ICA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_IMPCONSUMO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_SERVICIO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_DESCUENTO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_CREE'
+    end
+    object TFloatField
+      FieldName = 'VALOR_INTERES'
+    end
+    object TFloatField
+      FieldName = 'VALOR_SUBTOTAL'
+    end
+    object TFloatField
+      FieldName = 'VALOR_NETO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_TOTAL'
+    end
+    object TFloatField
+      FieldName = 'VALOR_TRM'
+    end
+    object TFloatField
+      FieldName = 'TOTAL_TRM'
+    end
+    object TStringField
+      FieldName = 'ID_ACTUALIZADO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_ENLAZADO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_IMPRESO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_ANULADO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_ESTADO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_CAMBIO'
+      Size = 1
+    end
+    object TIntegerField
+      FieldName = 'TAG_INFO'
+    end
+  end
+  object DETAILDatasource: TDataSource
+    DataSet = DETAIL
+  end
+  object PARAMETRO: TADOQuery
+    Active = True
+    Connection = FrRep_Designer.DBConexion
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM PARAMETRO')
+    object TWideStringField
+      FieldName = 'CODIGO_PERIODO'
+      Size = 4
+    end
+    object TWideStringField
+      FieldName = 'NOMBRE'
+      Size = 100
+    end
+    object TWideStringField
+      FieldName = 'ID_EMPRESA'
+    end
+    object TWideStringField
+      FieldName = 'NOMBRE_EMPRESA'
+      Size = 100
+    end
+    object TWideStringField
+      FieldName = 'DIRECCION_EMPRESA'
+      Size = 100
+    end
+    object TWideStringField
+      FieldName = 'TELEFONO_EMPRESA'
+      Size = 50
+    end
+    object TWideStringField
+      FieldName = 'MUNICIPIO_EMPRESA'
+      Size = 50
+    end
+    object TWideStringField
+      FieldName = 'DEPARTAMENTO_EMPRESA'
+      Size = 50
+    end
+    object TWideStringField
+      FieldName = 'PAIS_EMPRESA'
+      Size = 50
+    end
+    object TWideStringField
+      FieldName = 'ID_STOCK'
+      Size = 1
+    end
+    object TWideStringField
+      FieldName = 'ID_ABRIR_CAJA'
+      Size = 1
+    end
+    object TWideStringField
+      FieldName = 'ID_CORTAR_TIRILLA'
+      Size = 1
+    end
+    object TWideStringField
+      FieldName = 'ID_AGRUPAR_PRODUCTO'
+      Size = 1
+    end
+    object TWideStringField
+      FieldName = 'ID_F_VENCIMIENTO'
+      Size = 1
+    end
+    object TWideStringField
+      FieldName = 'NOMBRE_FUENTE'
+      Size = 50
+    end
+    object TIntegerField
+      FieldName = 'TAMANO_FUENTE'
+    end
+    object TIntegerField
+      FieldName = 'TAMANO_LINEA'
+    end
+    object TWideStringField
+      FieldName = 'IMPRESORA'
+      Size = 50
+    end
+    object TWideStringField
+      FieldName = 'ID_MONEDA'
+      Size = 1
+    end
+    object TWideStringField
+      FieldName = 'ID_ORDEN_Z'
+      Size = 1
+    end
+    object TIntegerField
+      FieldName = 'ID_VENDEDOR'
+    end
+    object TIntegerField
+      FieldName = 'ID_PRODUCTO'
+    end
+    object TIntegerField
+      FieldName = 'ID_DECIMALES'
+    end
+    object TIntegerField
+      FieldName = 'ID_DECIMALES_TRM'
+    end
+    object TBlobField
+      FieldName = 'LOGOTIPO'
+    end
+    object TIntegerField
+      FieldName = 'TAG_INFO'
+    end
+    object TMemoField
+      FieldName = 'ENCABEZADO'
+      BlobType = ftMemo
+    end
+    object TMemoField
+      FieldName = 'PIE_PAGINA'
+      BlobType = ftMemo
+    end
+    object TStringField
+      FieldName = 'ID_FORMATO_TIRILLA'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_CODIGO_PRODUCTO'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_CODIGO_BARRAS'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_COMANDA_FACTURA'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_PEDIR_VENDEDOR'
+      Visible = False
+      Size = 1
+    end
+    object TFloatField
+      FieldName = 'DIAS_PREAVISO'
+      Visible = False
+    end
+    object TFloatField
+      FieldName = 'VALOR_DOMICILIO'
+      Visible = False
+    end
+    object TFloatField
+      FieldName = 'MARGEN_UTILIDAD'
+      Visible = False
+    end
+    object TStringField
+      FieldName = 'TIPO_CODIGO_BARRAS'
+      Visible = False
+      Size = 50
+    end
+    object TStringField
+      FieldName = 'DOCUMENTO_FACTURA'
+      Visible = False
+      Size = 50
+    end
+    object TStringField
+      FieldName = 'DOCUMENTO_COMPRA'
+      Visible = False
+      Size = 50
+    end
+    object TStringField
+      FieldName = 'TIPO_IMPRESORA'
+      Visible = False
+      Size = 50
+    end
+    object TStringField
+      FieldName = 'PUERTO_IMPRESORA'
+      Visible = False
+      Size = 50
+    end
+    object TStringField
+      FieldName = 'NOMBRE_IMPRESORA'
+      Visible = False
+      Size = 255
+    end
+    object TStringField
+      FieldName = 'ID_IMAGEN_VENTAS'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_IMAGEN_COMPRAS'
+      Visible = False
+      Size = 1
+    end
+    object TIntegerField
+      FieldName = 'IMAGEN_WIDTH'
+      Visible = False
+    end
+    object TIntegerField
+      FieldName = 'IMAGEN_HEIGHT'
+      Visible = False
+    end
+    object TIntegerField
+      FieldName = 'FONT_SIZE_A'
+      Visible = False
+    end
+    object TIntegerField
+      FieldName = 'FONT_SIZE_B'
+      Visible = False
+    end
+    object TIntegerField
+      FieldName = 'NUMEROS_COMANDAS'
+      Visible = False
+    end
+    object TStringField
+      FieldName = 'ID_COMANDA_DETALLE'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_CAMPO_DETALLE'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'FRANQUICIA'
+      Visible = False
+      Size = 100
+    end
+    object TStringField
+      FieldName = 'CODIGO_RECEPTOR'
+      Visible = False
+    end
+    object TStringField
+      FieldName = 'ID_FUERZA_VENTA'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'HORAS_RESUMEN_CAJA'
+      Visible = False
+      Size = 100
+    end
+    object TStringField
+      FieldName = 'ID_CAPTURA_RAPIDA'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_CALCULAR_COMPRA_RC'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_BUSQUEDA_C_N'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_CAPTURA_RESUMIDA'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_SINCRONIZAR_VISTAS'
+      Visible = False
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_CONTROL_KARDEX'
+      Visible = False
+      Size = 1
+    end
+  end
+  object PARAMETRODatasource: TDataSource
+    DataSet = PARAMETRO
+  end
+end
+object QuickReport: TDesignQuickReport
+  ShowingPreview = False
+  DataSet = RuntimeDatamodule.MASTER
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Style = []
+  Functions.Strings = (
+    'PAGENUMBER'
+    'COLUMNNUMBER'
+    'REPORTTITLE'
+    'DISCRIMINADOS')
+  Functions.DATA = (
+    '0'
+    '0'
+    #39#39
+    '0')
+  Options = [FirstPageHeader, LastPageFooter]
+  Page.Columns = 1
+  Page.Orientation = poPortrait
+  Page.PaperSize = Custom
+  Page.Ruler = False
+  Page.Continuous = False
+  Page.Values = (
+    5.291666666666667000
+    5291.666666666667000000
+    5.291666666666667000
+    687.916666666666700000
+    26.458333333333330000
+    5.291666666666667000
+    0.000000000000000000)
+  PrinterSettings.Copies = 1
+  PrinterSettings.OutputBin = First
+  PrinterSettings.Duplex = False
+  PrinterSettings.FirstPage = 0
+  PrinterSettings.LastPage = 0
+  PrinterSettings.UseStandardprinter = False
+  PrinterSettings.UseCustomBinCode = False
+  PrinterSettings.CustomBinCode = 0
+  PrinterSettings.ExtendedDuplex = 0
+  PrinterSettings.UseCustomPaperCode = False
+  PrinterSettings.CustomPaperCode = 0
+  PrinterSettings.PrintMetaFile = False
+  PrinterSettings.MemoryLimit = 1000000
+  PrinterSettings.PrintQuality = 0
+  PrinterSettings.Collate = 0
+  PrinterSettings.ColorOption = 0
+  PrintIfEmpty = True
+  SnapToGrid = True
+  Units = Pixels
+  Zoom = 100
+  PrevFormStyle = fsNormal
+  PreviewInitialState = wsMaximized
+  PreviewWidth = 500
+  PreviewHeight = 500
+  PrevInitialZoom = qrZoomToFit
+  PreviewDefaultSaveType = stPDF
+  PreviewLeft = 0
+  PreviewTop = 0
+  LabelSettings.FirstLabel = 0
+  LabelSettings.LabelCount = 0
+  PrepareAutomatically = False
+  DesignBackgroundDX = 0
+  DesignBackgroundDY = 0
+  RulerPanel = ReportDesignerForm.RulerPanel1
+  object BAND2: TQRDesignBand
+    Left = 10
+    Top = 2
+    Width = 248
+    Height = 152
+    AlignToBottom = False
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      402.166666666666700000
+      656.166666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbTitle
+    EditorEnabled = True
+    BandNum = 0
+    object DBText1: TQRDesignDBText
+      Left = 4
+      Top = 54
+      Width = 239
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        10.583333333333330000
+        142.875000000000000000
+        632.354166666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AlignToBand = False
+      AutoSize = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.PARAMETRO
+      DataField = 'NOMBRE_EMPRESA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object Expression2: TQRDesignExpr
+      Left = 4
+      Top = 69
+      Width = 239
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        10.583333333333330000
+        182.562500000000000000
+        632.354166666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AlignToBand = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      Expression = #39'NIT:  '#39' + PARAMETRO.ID_EMPRESA'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object DBText3: TQRDesignDBText
+      Left = 4
+      Top = 99
+      Width = 238
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        10.583333333333330000
+        261.937500000000000000
+        629.708333333333300000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AlignToBand = False
+      AutoSize = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.PARAMETRO
+      DataField = 'DIRECCION_EMPRESA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object TQRDesignExpr
+      Left = 4
+      Top = 114
+      Width = 239
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        10.583333333333330000
+        301.625000000000000000
+        632.354166666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AlignToBand = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      Expression = #39'Tel(s):  '#39' + PARAMETRO.TELEFONO_EMPRESA'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object DBText5: TQRDesignDBText
+      Left = 4
+      Top = 129
+      Width = 239
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        10.583333333333330000
+        341.312500000000000000
+        632.354166666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AlignToBand = False
+      AutoSize = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.PARAMETRO
+      DataField = 'MUNICIPIO_EMPRESA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object DBImage1: TQRDesignDBImage
+      Left = 92
+      Top = 6
+      Width = 57
+      Height = 46
+      Size.Values = (
+        121.708333333333300000
+        243.416666666666700000
+        15.875000000000000000
+        150.812500000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      DataField = 'LOGOTIPO'
+      DataSet = RuntimeDatamodule.PARAMETRO
+      Stretch = True
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+    end
+    object Reportlabel1: TQRDesignLabel
+      Left = 5
+      Top = 86
+      Width = 237
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        13.229166666666670000
+        227.541666666666700000
+        627.062500000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AlignToBand = False
+      AutoSize = False
+      Caption = 'RESTAURANTE MAMASANTA'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+  end
+  object BAND3: TQRDesignBand
+    Left = 10
+    Top = 154
+    Width = 248
+    Height = 44
+    AlignToBottom = False
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      116.416666666666700000
+      656.166666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbColumnHeader
+    EditorEnabled = True
+    BandNum = 0
+    object DBRichtext2: TQRDesignDBRichtext
+      Left = 2
+      Top = 6
+      Width = 240
+      Height = 35
+      Enabled = False
+      Size.Values = (
+        92.604166666666670000
+        5.291666666666667000
+        15.875000000000000000
+        635.000000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AutoStretch = True
+      Color = clWindow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = []
+      HiresExport = False
+      Transparent = False
+      YIncrement = 50
+      DataField = 'ENCABEZADO'
+      DataSet = RuntimeDatamodule.PARAMETRO
+      EditorEnabled = True
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+    end
+  end
+  object BAND4: TQRDesignBand
+    Left = 10
+    Top = 198
+    Width = 248
+    Height = 204
+    AlignToBottom = False
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      539.750000000000000000
+      656.166666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbDetail
+    EditorEnabled = True
+    BandNum = 0
+    object Shape1: TQRDesignShape
+      Left = 6
+      Top = 4
+      Width = 238
+      Height = 48
+      Size.Values = (
+        127.000000000000000000
+        15.875000000000000000
+        10.583333333333330000
+        629.708333333333300000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Shape = qrsRoundRect
+      VertAdjust = 0
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+    end
+    object Expression1: TQRDesignExpr
+      Left = 12
+      Top = 6
+      Width = 224
+      Height = 17
+      Size.Values = (
+        44.979166666666670000
+        31.750000000000000000
+        15.875000000000000000
+        592.666666666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AlignToBand = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      Expression = 
+        'IF(MASTER.TIPO_DOCUMENTO = '#39'CMP'#39', '#39'COMPRA'#39', IF(MASTER.TIPO_DOCUM' +
+        'ENTO = '#39'CTZ'#39', '#39'COTIZACION'#39', IF(MASTER.TIPO_DOCUMENTO = '#39'FCT'#39', '#39'F' +
+        'ACTURA'#39', IF(MASTER.TIPO_DOCUMENTO = '#39'MSS'#39', '#39'FACTURA'#39', IF(MASTER.' +
+        'TIPO_DOCUMENTO = '#39'TMP'#39', '#39'FACTURA'#39', IF(MASTER.TIPO_DOCUMENTO = '#39'C' +
+        'XC'#39', '#39'CUENTA POR COBRAR'#39', IF(MASTER.TIPO_DOCUMENTO = '#39'CXP'#39', '#39'CUE' +
+        'NTA POR PAGAR'#39', IF(MASTER.TIPO_DOCUMENTO = '#39'CMB'#39', '#39'CAMBIO'#39', IF(M' +
+        'ASTER.TIPO_DOCUMENTO = '#39'CTS'#39', '#39'CORTESIA'#39', '#39'NUMERO DE DOCUMENTO'#39')' +
+        '))))))))'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object QRDBText1: TQRDesignDBText
+      Left = 12
+      Top = 27
+      Width = 223
+      Height = 18
+      Size.Values = (
+        47.625000000000000000
+        31.750000000000000000
+        71.437500000000000000
+        590.020833333333300000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AlignToBand = False
+      AutoSize = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.MASTER
+      DataField = 'NUMERO_DOCUMENTO'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object Shape5: TQRDesignShape
+      Left = 4
+      Top = 138
+      Width = 236
+      Height = 42
+      Size.Values = (
+        111.125000000000000000
+        10.583333333333330000
+        365.125000000000000000
+        624.416666666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Shape = qrsRoundRect
+      VertAdjust = 0
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+    end
+    object DBText9: TQRDesignDBText
+      Left = 98
+      Top = 143
+      Width = 125
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        259.291666666666700000
+        378.354166666666700000
+        330.729166666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.MASTER
+      DataField = 'NOMBRE_TERCERO'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object Reportlabel4: TQRDesignLabel
+      Left = 10
+      Top = 143
+      Width = 57
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        26.458333333333330000
+        378.354166666666700000
+        150.812500000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Caption = 'NOMBRE'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object TQRDesignLabel
+      Left = 10
+      Top = 161
+      Width = 78
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        26.458333333333330000
+        425.979166666666700000
+        206.375000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Caption = 'DOCUMENTO'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object Shape6: TQRDesignShape
+      Left = 4
+      Top = 182
+      Width = 236
+      Height = 19
+      Size.Values = (
+        50.270833333333330000
+        10.583333333333330000
+        481.541666666666700000
+        624.416666666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Shape = qrsRoundRect
+      VertAdjust = 0
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+    end
+    object TQRDesignLabel
+      Left = 9
+      Top = 184
+      Width = 79
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        23.812500000000000000
+        486.833333333333300000
+        209.020833333333300000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Caption = 'DESCRIPCION'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object TQRDesignLabel
+      Left = 107
+      Top = 184
+      Width = 59
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        283.104166666666700000
+        486.833333333333300000
+        156.104166666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taRightJustify
+      AlignToBand = False
+      AutoSize = False
+      Caption = 'CANTIDAD'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object TQRDesignLabel
+      Left = 172
+      Top = 184
+      Width = 62
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        455.083333333333300000
+        486.833333333333300000
+        164.041666666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taRightJustify
+      AlignToBand = False
+      AutoSize = False
+      Caption = 'TOTAL'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object Expression3: TQRDesignExpr
+      Left = 98
+      Top = 161
+      Width = 122
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        259.291666666666700000
+        425.979166666666700000
+        322.791666666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      Expression = 'TRIM(MASTER.CODIGO_TERCERO)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object Expression4: TQRDesignExpr
+      Left = 5
+      Top = 56
+      Width = 238
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        13.229166666666670000
+        148.166666666666700000
+        629.708333333333300000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      Expression = #39'Fecha: '#39' + TRIM(MASTER.FECHA_DOCUMENTO)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object TQRDesignExpr
+      Left = 6
+      Top = 73
+      Width = 236
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        15.875000000000000000
+        193.145833333333300000
+        624.416666666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      Expression = #39'Hora: '#39' + TRIM(MASTER.HORA)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object TQRDesignExpr
+      Left = 7
+      Top = 90
+      Width = 234
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        18.520833333333330000
+        238.125000000000000000
+        619.125000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      Expression = #39'Vendedor: '#39' + TRIM(MASTER.NOMBRE_VENDEDOR)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object TQRDesignExpr
+      Left = 7
+      Top = 107
+      Width = 234
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        18.520833333333330000
+        283.104166666666700000
+        619.125000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      Expression = #39'Comanda: '#39' + TRIM(MASTER.DOCUMENTO_COMANDA)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object TQRDesignExpr
+      Left = 7
+      Top = 120
+      Width = 234
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        18.520833333333330000
+        317.500000000000000000
+        619.125000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      Expression = #39'Mesa: '#39' + TRIM(MASTER.NOMBRE_ESPACIO)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+  end
+  object RESUMEN: TQRDesignBand
+    Left = 10
+    Top = 452
+    Width = 248
+    Height = 124
+    AlignToBottom = False
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      328.083333333333300000
+      656.166666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbSummary
+    EditorEnabled = True
+    BandNum = 0
+    object Shape9: TQRDesignShape
+      Left = 4
+      Top = 4
+      Width = 233
+      Height = 21
+      Size.Values = (
+        55.562500000000000000
+        10.583333333333330000
+        10.583333333333330000
+        616.479166666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Shape = qrsRoundRect
+      VertAdjust = 0
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+    end
+    object TQRDesignLabel
+      Left = 32
+      Top = 4
+      Width = 80
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        84.666666666666670000
+        10.583333333333330000
+        211.666666666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Caption = 'TOTAL'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object TQRDesignDBText
+      Left = 128
+      Top = 8
+      Width = 100
+      Height = 15
+      Size.Values = (
+        39.687500000000000000
+        338.666666666666700000
+        21.166666666666670000
+        264.583333333333300000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taRightJustify
+      AlignToBand = False
+      AutoSize = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.MASTER
+      DataField = 'VALOR_TOTAL'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Mask = '###,###,##0.#0'
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+    object DBText6: TQRDesignDBText
+      Left = 7
+      Top = 36
+      Width = 232
+      Height = 57
+      Size.Values = (
+        150.812500000000000000
+        18.520833333333330000
+        95.250000000000000000
+        613.833333333333300000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taCenter
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = True
+      Color = clWhite
+      DataSet = RuntimeDatamodule.PARAMETRO
+      DataField = 'PIE_PAGINA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 8
+    end
+  end
+  object DETALLE: TQRDesignSubdetail
+    Left = 10
+    Top = 402
+    Width = 248
+    Height = 17
+    AlignToBottom = False
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      44.979166666666670000
+      656.166666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    Master = Owner
+    DataSet = RuntimeDatamodule.DETAIL
+    PrintBefore = False
+    PrintIfEmpty = True
+    CompMoverMoving = False
+    EditorEnabled = True
+    Expression = 
+      '(TRIM(MASTER.DATAKEY) = TRIM(DETAIL.DATAKEY)) AND (TRIM(MASTER.T' +
+      'IPO_DOCUMENTO) = TRIM(DETAIL.TIPO_DOCUMENTO)) '
+    BandNum = 0
+    DesignBackgroundDX = 0
+    DesignBackgroundDY = 0
+    object DBText2: TQRDesignDBText
+      Left = 9
+      Top = 2
+      Width = 117
+      Height = 13
+      Size.Values = (
+        34.395833333333330000
+        23.812500000000000000
+        5.291666666666667000
+        309.562500000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.DETAIL
+      DataField = 'NOMBRE'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 7
+    end
+    object DBText4: TQRDesignDBText
+      Left = 130
+      Top = 1
+      Width = 36
+      Height = 13
+      Size.Values = (
+        34.395833333333330000
+        343.958333333333300000
+        2.645833333333333000
+        95.250000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taRightJustify
+      AlignToBand = False
+      AutoSize = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.DETAIL
+      DataField = 'CANTIDAD'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Mask = '###,###,##0.#0'
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 7
+    end
+    object TQRDesignDBText
+      Left = 171
+      Top = 1
+      Width = 68
+      Height = 13
+      Size.Values = (
+        34.395833333333330000
+        452.437500000000000000
+        2.645833333333333000
+        179.916666666666700000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taRightJustify
+      AlignToBand = False
+      AutoSize = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.DETAIL
+      DataField = 'VALOR_NETO'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      Mask = '###,###,##0.#0'
+      ParentFont = False
+      Transparent = False
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      VerticalAlignment = tlTop
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 7
+    end
+  end
+  object DISCRIMINADOS: TQRDesignLoopband
+    Left = 10
+    Top = 419
+    Width = 248
+    Height = 33
+    Frame.DrawTop = True
+    AlignToBottom = False
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    LinkBand = RESUMEN
+    Size.Values = (
+      87.312500000000000000
+      656.166666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    Master = Owner
+    PrintCount = 1
+    PrintBefore = False
+    EditorEnabled = True
+    BandNum = 0
+    Expression = 'TRUE'
+    object DBRichtext1: TQRDesignDBRichtext
+      Left = 4
+      Top = 3
+      Width = 235
+      Height = 24
+      Enabled = False
+      Size.Values = (
+        63.500000000000000000
+        10.583333333333330000
+        7.937500000000000000
+        621.770833333333300000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AutoStretch = True
+      Color = clWindow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      HiresExport = False
+      Transparent = False
+      YIncrement = 50
+      DataField = 'DISCRIMINADOS'
+      DataSet = RuntimeDatamodule.MASTER
+      EditorEnabled = True
+      FixBottomPosition = False
+      StretchHeightWithBand = True
+      object TQRRichEdit
+        Left = 1
+        Top = 1
+        Width = 234
+        Height = 30
+      end
+      object TQRRichEdit
+        Left = 1
+        Top = 1
+        Width = 234
+        Height = 13
+      end
+    end
+  end
+end
+object TPropertyAddons
+end

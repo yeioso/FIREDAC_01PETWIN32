@@ -1,0 +1,859 @@
+object Header: TComponentFileHeader
+  UserData = {}
+end
+object RuntimeDatamodule: TRuntimeDatamodule
+  OldCreateOrder = False
+  Height = 0
+  Width = 0
+  object RESUMEN_CAJA: TADOQuery
+    Active = True
+    Connection = FrRep_Designer.DBConexion
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM CAJA_GYM')
+    object TWideStringField
+      FieldName = 'CODIGO_ESTACION'
+      Size = 100
+    end
+    object TWideStringField
+      FieldName = 'FECHA'
+      Size = 10
+    end
+    object TWideStringField
+      FieldName = 'HORA_INI'
+      Size = 10
+    end
+    object TWideStringField
+      FieldName = 'HORA_FIN'
+      Size = 10
+    end
+    object TWideStringField
+      FieldName = 'ABIERTA'
+      Size = 1
+    end
+    object TWideStringField
+      FieldName = 'CERRADA'
+      Size = 1
+    end
+    object TFloatField
+      FieldName = 'BASE_INICIAL'
+    end
+    object TWideStringField
+      FieldName = 'POS01_DOC_INI'
+    end
+    object TWideStringField
+      FieldName = 'POS01_DOC_FIN'
+    end
+    object TWideStringField
+      FieldName = 'POS02_DOC_INI'
+    end
+    object TWideStringField
+      FieldName = 'POS02_DOC_FIN'
+    end
+    object TWideStringField
+      FieldName = 'POS03_DOC_INI'
+    end
+    object TWideStringField
+      FieldName = 'POS03_DOC_FIN'
+    end
+    object TWideStringField
+      FieldName = 'POS04_DOC_INI'
+    end
+    object TWideStringField
+      FieldName = 'POS04_DOC_FIN'
+    end
+    object TFloatField
+      FieldName = 'POS01_EFECTIVO'
+    end
+    object TFloatField
+      FieldName = 'POS02_EFECTIVO'
+    end
+    object TFloatField
+      FieldName = 'POS03_EFECTIVO'
+    end
+    object TFloatField
+      FieldName = 'POS04_EFECTIVO'
+    end
+    object TFloatField
+      FieldName = 'POS01_CHEQUE'
+    end
+    object TFloatField
+      FieldName = 'POS02_CHEQUE'
+    end
+    object TFloatField
+      FieldName = 'POS03_CHEQUE'
+    end
+    object TFloatField
+      FieldName = 'POS04_CHEQUE'
+    end
+    object TFloatField
+      FieldName = 'POS01_TDB'
+    end
+    object TFloatField
+      FieldName = 'POS02_TDB'
+    end
+    object TFloatField
+      FieldName = 'POS03_TDB'
+    end
+    object TFloatField
+      FieldName = 'POS04_TDB'
+    end
+    object TFloatField
+      FieldName = 'POS01_TCR'
+    end
+    object TFloatField
+      FieldName = 'POS02_TCR'
+    end
+    object TFloatField
+      FieldName = 'POS03_TCR'
+    end
+    object TFloatField
+      FieldName = 'POS04_TCR'
+    end
+    object TFloatField
+      FieldName = 'TOTAL_VENDIDO'
+    end
+    object TFloatField
+      FieldName = 'OTROS_INGRESOS'
+    end
+    object TFloatField
+      FieldName = 'OTROS_EGRESOS'
+    end
+    object TFloatField
+      FieldName = 'TOTAL_GASTOS'
+    end
+    object TFloatField
+      FieldName = 'TOTAL_NOMINA'
+    end
+    object TFloatField
+      FieldName = 'TOTAL_CXC'
+    end
+    object TFloatField
+      FieldName = 'TOTAL_CAJA'
+    end
+    object TFloatField
+      FieldName = 'NRO_FACTURAS'
+    end
+    object TFloatField
+      FieldName = 'NRO_PRODUCTOS'
+    end
+    object TFloatField
+      FieldName = 'NRO_ANULADOS'
+    end
+    object TFloatField
+      FieldName = 'NRO_ELIMINADOS'
+    end
+    object TIntegerField
+      FieldName = 'TAG_INFO'
+    end
+  end
+  object QueryDatasource1: TDataSource
+    Tag = 13773
+    DataSet = RESUMEN_CAJA
+  end
+end
+object QuickReport: TDesignQuickReport
+  Frame.Color = clBlack
+  Frame.DrawTop = False
+  Frame.DrawBottom = False
+  Frame.DrawLeft = False
+  Frame.DrawRight = False
+  DataSet = RuntimeDatamodule.RESUMEN_CAJA
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Style = []
+  Functions.Strings = (
+    'PAGENUMBER'
+    'COLUMNNUMBER'
+    'REPORTTITLE')
+  Functions.DATA = (
+    '0'
+    '0'
+    #39#39)
+  Options = [FirstPageHeader, LastPageFooter]
+  Page.Columns = 1
+  Page.Orientation = poPortrait
+  Page.PaperSize = Custom
+  Page.Ruler = False
+  Page.Continuous = False
+  Page.Values = (
+    0.000000000000000000
+    1200.000000000000000000
+    0.000000000000000000
+    750.000000000000000000
+    0.000000000000000000
+    0.000000000000000000
+    0.000000000000000000)
+  PrinterSettings.Copies = 1
+  PrinterSettings.OutputBin = First
+  PrinterSettings.Duplex = False
+  PrinterSettings.FirstPage = 0
+  PrinterSettings.LastPage = 0
+  PrinterSettings.UseStandardprinter = False
+  PrinterSettings.UseCustomBinCode = False
+  PrinterSettings.CustomBinCode = 0
+  PrinterSettings.ExtendedDuplex = 0
+  PrinterSettings.UseCustomPaperCode = False
+  PrinterSettings.CustomPaperCode = 0
+  PrinterSettings.PrintMetaFile = False
+  PrinterSettings.PrintQuality = 0
+  PrinterSettings.Collate = 0
+  PrinterSettings.ColorOption = 0
+  PrintIfEmpty = True
+  SnapToGrid = True
+  Units = MM
+  Zoom = 100
+  PrevFormStyle = fsNormal
+  PreviewInitialState = wsMaximized
+  PrevInitialZoom = qrZoomToFit
+  PreviewDefaultSaveType = stQRP
+  PreviewLeft = 0
+  PreviewTop = 0
+  LabelSettings.FirstLabel = 0
+  LabelSettings.LabelCount = 0
+  PrepareAutomatically = False
+  DesignBackgroundDX = 0
+  DesignBackgroundDY = 0
+  RulerPanel = ReportDesignerForm.RulerPanel1
+  object Detailband: TQRDesignBand
+    Left = 0
+    Top = 0
+    Width = 283
+    Height = 428
+    Frame.Color = clBlack
+    Frame.DrawTop = False
+    Frame.DrawBottom = False
+    Frame.DrawLeft = False
+    Frame.DrawRight = False
+    AlignToBottom = False
+    Color = clWhite
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      1132.416666666667000000
+      748.770833333333300000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbDetail
+    EditorEnabled = True
+    BandNum = 0
+    object Expression1: TQRDesignExpr
+      Left = 27
+      Top = 9
+      Width = 254
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        71.437500000000000000
+        23.812500000000000000
+        672.041666666666800000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = #39'Fecha: '#39' + TRIM(RESUMEN_CAJA.FECHA)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object Expression2: TQRDesignExpr
+      Left = 27
+      Top = 33
+      Width = 254
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        71.437500000000000000
+        87.312500000000000000
+        672.041666666666800000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = 
+        #39'Hora: '#39' + TRIM(RESUMEN_CAJA.HORA_INI) + '#39'  a  '#39'  +TRIM(RESUMEN_' +
+        'CAJA.HORA_FIN)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object Expression3: TQRDesignExpr
+      Left = 27
+      Top = 57
+      Width = 254
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        71.437500000000000000
+        150.812500000000000000
+        672.041666666666800000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = #39'Estaci'#243'n: '#39' + TRIM(RESUMEN_CAJA.CODIGO_ESTACION)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object Expression4: TQRDesignExpr
+      Left = 27
+      Top = 81
+      Width = 254
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        71.437500000000000000
+        214.312500000000000000
+        672.041666666666800000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = #39'Documento Inicial: '#39' + TRIM(RESUMEN_CAJA.POS01_DOC_INI)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 27
+      Top = 105
+      Width = 253
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        71.437500000000000000
+        277.812500000000000000
+        669.395833333333200000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = #39'Documento Final: '#39' + TRIM(RESUMEN_CAJA.POS01_DOC_FIN)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 184
+      Width = 253
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        486.833333333333400000
+        669.395833333333400000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = 
+        #39'Base Inicial: '#39' + FORMATNUMERIC('#39'###,###,###.##'#39', RESUMEN_CAJA.' +
+        'BASE_INICIAL)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 208
+      Width = 253
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        550.333333333333400000
+        669.395833333333400000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = 
+        #39'Total Ventas: '#39' + FORMATNUMERIC('#39'###,###,###.##'#39', RESUMEN_CAJA.' +
+        'TOTAL_VENDIDO)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 299
+      Width = 251
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        791.104166666666800000
+        664.104166666666800000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = 
+        #39'Total Caja: '#39' + FORMATNUMERIC('#39'###,###,###.##'#39', RESUMEN_CAJA.TO' +
+        'TAL_CAJA)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 327
+      Width = 251
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        865.187500000000000000
+        664.104166666666800000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = 
+        #39'Nro. de Facturas: '#39' + FORMATNUMERIC('#39'###,###,###.##'#39', RESUMEN_C' +
+        'AJA.NRO_FACTURAS)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 351
+      Width = 252
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        928.687500000000000000
+        666.750000000000000000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = 
+        #39'Nro. de Productos: '#39' + FORMATNUMERIC('#39'###,###,###.##'#39', RESUMEN_' +
+        'CAJA.NRO_PRODUCTOS)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object DBText1: TQRDesignDBText
+      Left = 29
+      Top = 371
+      Width = 250
+      Height = 40
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        105.833333333333300000
+        76.729166666666670000
+        981.604166666666700000
+        661.458333333333300000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Color = clWhite
+      DataSet = RuntimeDatamodule.RESUMEN_CAJA
+      DataField = 'DETALLE'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      Transparent = False
+      WordWrap = True
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FullJustify = False
+      MaxBreakChars = 0
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 230
+      Width = 252
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        608.541666666666800000
+        666.750000000000000000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = 
+        #39'Total Servicio: '#39' + FORMATNUMERIC('#39'###,###,###.##'#39',RESUMEN_CAJA' +
+        '.OTROS_INGRESOS )'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 251
+      Width = 252
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        664.104166666666800000
+        666.750000000000000000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = 
+        #39'Gastos: '#39' + FORMATNUMERIC('#39'###,###,###.##'#39', RESUMEN_CAJA.TOTAL_' +
+        'GASTOS )'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 273
+      Width = 252
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        722.312500000000000000
+        666.750000000000000000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = 
+        #39'N'#243'minas: '#39' + FORMATNUMERIC('#39'###,###,###.##'#39', RESUMEN_CAJA.TOTAL' +
+        '_NOMINA )'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 132
+      Width = 254
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        349.250000000000000000
+        672.041666666666800000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = #39'Documento Inicial: '#39' + TRIM(RESUMEN_CAJA.POS02_DOC_INI)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+    object TQRDesignExpr
+      Left = 28
+      Top = 156
+      Width = 253
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.979166666666670000
+        74.083333333333340000
+        412.750000000000100000
+        669.395833333333400000)
+      XLColumn = 0
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = False
+      AutoStretch = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Color = clWhite
+      ParentFont = False
+      ResetAfterPrint = False
+      Transparent = False
+      WordWrap = True
+      Expression = #39'Documento Final: '#39' + TRIM(RESUMEN_CAJA.POS02_DOC_FIN)'
+      ExportAs = exptText
+      WrapStyle = BreakOnSpaces
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+      FontSize = 9
+    end
+  end
+end
+object TPropertyAddons
+end

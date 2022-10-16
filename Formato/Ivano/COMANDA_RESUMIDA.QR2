@@ -1,0 +1,483 @@
+object Header: TComponentFileHeader
+  UserData = {}
+end
+object RuntimeDatamodule1: TRuntimeDatamodule
+  OldCreateOrder = False
+  Height = 0
+  Width = 0
+  object COMANDA_RESUMIDA: TADOQuery
+    Active = True
+    Connection = FrRep_Designer.DBConexion
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM DOCUMENTO_ENC_AUX')
+    object TStringField
+      FieldName = 'DATAKEY'
+    end
+    object TStringField
+      FieldName = 'TIPO_CAPTURA'
+      Size = 3
+    end
+    object TStringField
+      FieldName = 'TIPO_DOCUMENTO'
+      Size = 3
+    end
+    object TStringField
+      FieldName = 'NUMERO_DOCUMENTO'
+    end
+    object TStringField
+      FieldName = 'DATAKEY_REFERENCIA'
+    end
+    object TStringField
+      FieldName = 'ORIGEN_REFERENCIA'
+      Size = 3
+    end
+    object TStringField
+      FieldName = 'DOCUMENTO_REFERENCIA'
+    end
+    object TStringField
+      FieldName = 'CODIGO_VENDEDOR'
+    end
+    object TStringField
+      FieldName = 'CODIGO_TERCERO'
+    end
+    object TStringField
+      FieldName = 'CODIGO_TERCERO_LP'
+      Size = 2
+    end
+    object TStringField
+      FieldName = 'CODIGO_SINONIMO'
+    end
+    object TStringField
+      FieldName = 'CODIGO_BASE'
+      Size = 4
+    end
+    object TStringField
+      FieldName = 'CODIGO_DOCUMENTO_ADM'
+      Size = 4
+    end
+    object TStringField
+      FieldName = 'NOMBRE'
+      Size = 100
+    end
+    object TStringField
+      FieldName = 'GARANTIA'
+      Size = 100
+    end
+    object TStringField
+      FieldName = 'FECHA_DOCUMENTO'
+      Size = 10
+    end
+    object TFloatField
+      FieldName = 'PLAZO'
+    end
+    object TStringField
+      FieldName = 'FECHA_VENCIMIENTO'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'CODIGO_ESTACION'
+      Size = 100
+    end
+    object TMemoField
+      FieldName = 'DIRECCION'
+      BlobType = ftMemo
+    end
+    object TMemoField
+      FieldName = 'OBSERVACION'
+      BlobType = ftMemo
+    end
+    object TMemoField
+      FieldName = 'ENCABEZADO'
+      BlobType = ftMemo
+    end
+    object TMemoField
+      FieldName = 'PIE_PAGINA'
+      BlobType = ftMemo
+    end
+    object TStringField
+      FieldName = 'CODIGO_ESPACIO'
+      Size = 4
+    end
+    object TStringField
+      FieldName = 'CODIGO_USUARIO'
+    end
+    object TStringField
+      FieldName = 'FECHA'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'HORA'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'ID_PREIMPRESO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_IMPRESO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_ANULADO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_ACTUALIZADO'
+      Size = 1
+    end
+    object TStringField
+      FieldName = 'ID_DESCARGADO'
+      Size = 1
+    end
+    object TFloatField
+      FieldName = 'NUMERO_PERSONAS'
+    end
+    object TFloatField
+      FieldName = 'VALOR_BASE'
+    end
+    object TFloatField
+      FieldName = 'VALOR_SUBTOTAL'
+    end
+    object TFloatField
+      FieldName = 'VALOR_NETO'
+    end
+    object TFloatField
+      FieldName = 'PORCENTAJE_LP'
+    end
+    object TFloatField
+      FieldName = 'BASE_IVA'
+    end
+    object TFloatField
+      FieldName = 'BASE_RETEIVA'
+    end
+    object TFloatField
+      FieldName = 'BASE_RETEFUENTE'
+    end
+    object TFloatField
+      FieldName = 'BASE_ICA'
+    end
+    object TFloatField
+      FieldName = 'BASE_IMPCONSUMO'
+    end
+    object TFloatField
+      FieldName = 'BASE_SERVICIO'
+    end
+    object TFloatField
+      FieldName = 'BASE_CREE'
+    end
+    object TFloatField
+      FieldName = 'BASE_DESCUENTO'
+    end
+    object TFloatField
+      FieldName = 'BASE_INTERES'
+    end
+    object TFloatField
+      FieldName = 'VALOR_IVA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_RETEIVA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_RETEFUENTE'
+    end
+    object TFloatField
+      FieldName = 'VALOR_ICA'
+    end
+    object TFloatField
+      FieldName = 'VALOR_IMPCONSUMO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_DESCUENTO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_SERVICIO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_CREE'
+    end
+    object TFloatField
+      FieldName = 'VALOR_INTERES'
+    end
+    object TFloatField
+      FieldName = 'VALOR_TOTAL'
+    end
+    object TFloatField
+      FieldName = 'VALOR_TRM'
+    end
+    object TFloatField
+      FieldName = 'TOTAL_TRM'
+    end
+    object TFloatField
+      FieldName = 'VALOR_DIVIDIDO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_PAGADO'
+    end
+    object TFloatField
+      FieldName = 'VALOR_VUELTO'
+    end
+    object TFloatField
+      FieldName = 'EFE'
+    end
+    object TFloatField
+      FieldName = 'EFE_TRM'
+    end
+    object TFloatField
+      FieldName = 'TDD'
+    end
+    object TFloatField
+      FieldName = 'TDD_TRM'
+    end
+    object TStringField
+      FieldName = 'TDD_ENTIDAD'
+    end
+    object TStringField
+      FieldName = 'TDD_VAUCHE'
+    end
+    object TFloatField
+      FieldName = 'TDC'
+    end
+    object TFloatField
+      FieldName = 'TDC_TRM'
+    end
+    object TStringField
+      FieldName = 'TDC_ENTIDAD'
+    end
+    object TStringField
+      FieldName = 'TDC_VAUCHE'
+    end
+    object TFloatField
+      FieldName = 'CHE'
+    end
+    object TFloatField
+      FieldName = 'CHE_TRM'
+    end
+    object TStringField
+      FieldName = 'CHE_ENTIDAD'
+    end
+    object TFloatField
+      FieldName = 'SDX'
+    end
+    object TFloatField
+      FieldName = 'SDX_TRM'
+    end
+    object TFloatField
+      FieldName = 'COR'
+    end
+    object TFloatField
+      FieldName = 'COR_TRM'
+    end
+    object TFloatField
+      FieldName = 'TRANSF'
+    end
+    object TFloatField
+      FieldName = 'TRANSF_TRM'
+    end
+    object TStringField
+      FieldName = 'TRANSF_ENTIDAD'
+    end
+    object TStringField
+      FieldName = 'TRANSF_VAUCHE'
+    end
+    object TFloatField
+      FieldName = 'SISTEMA_CREDITO'
+    end
+    object TFloatField
+      FieldName = 'SISTEMA_CREDITO_TRM'
+    end
+    object TFloatField
+      FieldName = 'CAR'
+    end
+    object TFloatField
+      FieldName = 'CAR_PAGADA'
+    end
+    object TFloatField
+      FieldName = 'CAR_TRM'
+    end
+    object TFloatField
+      FieldName = 'CAR_TRM_PAGADA'
+    end
+    object TFloatField
+      FieldName = 'CAR_PLAZO'
+    end
+    object TStringField
+      FieldName = 'CAR_FECHAINI'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'CAR_FECHAFIN'
+      Size = 10
+    end
+    object TFloatField
+      FieldName = 'CAR_DIAS_VENCIDOS'
+    end
+    object TStringField
+      FieldName = 'CAR_EDAD'
+      Size = 10
+    end
+    object TStringField
+      FieldName = 'CAR_ESTADO_CARTERA'
+      Size = 10
+    end
+    object TFloatField
+      FieldName = 'SALDO_PENDIENTE'
+    end
+    object TMemoField
+      FieldName = 'DISCRIMINADOS'
+      BlobType = ftMemo
+    end
+    object TBlobField
+      FieldName = 'QR'
+    end
+    object TStringField
+      FieldName = 'CUFE'
+      Size = 255
+    end
+    object TIntegerField
+      FieldName = 'TAG_INFO'
+    end
+    object TStringField
+      FieldName = 'DOCUMENTO_COMANDA'
+    end
+    object TMemoField
+      FieldName = 'INFO_COMANDA'
+      BlobType = ftMemo
+    end
+  end
+  object COMANDADatasource: TDataSource
+    DataSet = COMANDA_RESUMIDA
+  end
+end
+object QuickReport: TDesignQuickReport
+  DataSet = RuntimeDatamodule1.COMANDA_RESUMIDA
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Style = []
+  Functions.Strings = (
+    'PAGENUMBER'
+    'COLUMNNUMBER'
+    'REPORTTITLE')
+  Functions.DATA = (
+    '0'
+    '0'
+    #39#39)
+  Options = [FirstPageHeader, LastPageFooter]
+  Page.Columns = 1
+  Page.Orientation = poPortrait
+  Page.PaperSize = Custom
+  Page.Ruler = False
+  Page.Continuous = False
+  Page.Values = (
+    100.012500000000000000
+    5291.666666666667000000
+    100.012500000000000000
+    793.750000000000000000
+    100.012500000000000000
+    100.012500000000000000
+    0.000000000000000000)
+  PrinterSettings.Copies = 1
+  PrinterSettings.OutputBin = First
+  PrinterSettings.Duplex = False
+  PrinterSettings.FirstPage = 0
+  PrinterSettings.LastPage = 0
+  PrinterSettings.UseStandardprinter = False
+  PrinterSettings.UseCustomBinCode = False
+  PrinterSettings.CustomBinCode = 0
+  PrinterSettings.ExtendedDuplex = 0
+  PrinterSettings.UseCustomPaperCode = False
+  PrinterSettings.CustomPaperCode = 0
+  PrinterSettings.PrintMetaFile = False
+  PrinterSettings.MemoryLimit = 1000000
+  PrinterSettings.PrintQuality = 0
+  PrinterSettings.Collate = 0
+  PrinterSettings.ColorOption = 0
+  PrintIfEmpty = True
+  SnapToGrid = True
+  Units = Pixels
+  Zoom = 100
+  PrevFormStyle = fsNormal
+  PreviewInitialState = wsMaximized
+  PrevInitialZoom = qrZoomToFit
+  PreviewDefaultSaveType = stPDF
+  PreviewLeft = 0
+  PreviewTop = 0
+  LabelSettings.FirstLabel = 0
+  LabelSettings.LabelCount = 0
+  PrepareAutomatically = False
+  DesignBackgroundDX = 0
+  DesignBackgroundDY = 0
+  RulerPanel = ReportDesignerForm.RulerPanel1
+  object BAND2: TQRDesignBand
+    Left = 38
+    Top = 38
+    Width = 224
+    Height = 12
+    AlignToBottom = False
+    Color = clWhite
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      31.750000000000000000
+      592.666666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbTitle
+    EditorEnabled = True
+    BandNum = 0
+  end
+  object DETALLE: TQRDesignBand
+    Left = 38
+    Top = 50
+    Width = 224
+    Height = 28
+    AlignToBottom = False
+    Color = clWhite
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = False
+    Size.Values = (
+      74.083333333333330000
+      592.666666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbDetail
+    EditorEnabled = True
+    BandNum = 0
+    object DBRichtext1: TQRDesignDBRichtext
+      Left = 4
+      Top = 5
+      Width = 216
+      Height = 19
+      Enabled = False
+      Size.Values = (
+        50.270833333333330000
+        10.583333333333330000
+        13.229166666666670000
+        571.500000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      Alignment = taLeftJustify
+      AutoStretch = True
+      Color = clWindow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Courier New'
+      Font.Style = []
+      HiresExport = False
+      Transparent = False
+      DataField = 'INFO_COMANDA'
+      DataSet = RuntimeDatamodule1.COMANDA_RESUMIDA
+      EditorEnabled = True
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+    end
+  end
+end
+object TPropertyAddons
+end

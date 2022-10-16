@@ -1,0 +1,10 @@
+CREATE DATABASE E:\datos\PRUEBAS.fdb USER "SYSDBA" PASSWORD "masterkey";
+CONNECT e:\datos\PRUEBAS.fdb USER "SYSDBA" PASSWORD "masterkey";
+
+CREATE DATABASE d:\datos\SPIDERPOS.fdb USER "SYSDBA" PASSWORD "masterkey";
+CREATE DATABASE D:\Clientes\Mamasanta\MAMASANTA.fdb USER "SYSDBA" PASSWORD "masterkey";
+
+
+CONNECT "D:\Proyectos\Clientes\Mamasanta\MAMASANTA.FDB" USER "SYSDBA" PASSWORD "masterkey";
+
+show tables;

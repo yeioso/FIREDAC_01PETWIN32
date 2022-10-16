@@ -1,0 +1,144 @@
+object Header: TComponentFileHeader
+  ReportTitle = 'Comanda Detallada'
+  UserData = {}
+end
+object RuntimeDatamodule: TRuntimeDatamodule
+  OldCreateOrder = False
+  Height = 0
+  Width = 0
+  object COMANDA_DETALLADA: TADOQuery
+    Active = True
+    Connection = FrRep_Designer.DBConexion
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT INFO_COMANDA '
+      'FROM DOCUMENTO_DET_AUX'
+      'WHERE ID_COMANDA = '#39'S'#39)
+    object TMemoField
+      FieldName = 'INFO_COMANDA'
+      BlobType = ftMemo
+    end
+  end
+  object QueryDatasource1: TDataSource
+    Tag = 13773
+    DataSet = COMANDA_DETALLADA
+  end
+end
+object QuickReport: TDesignQuickReport
+  ShowingPreview = False
+  DataSet = RuntimeDatamodule.COMANDA_DETALLADA
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Style = []
+  Functions.Strings = (
+    'PAGENUMBER'
+    'COLUMNNUMBER'
+    'REPORTTITLE')
+  Functions.DATA = (
+    '0'
+    '0'
+    #39#39)
+  Options = [FirstPageHeader, LastPageFooter]
+  Page.Columns = 1
+  Page.Orientation = poPortrait
+  Page.PaperSize = Custom
+  Page.Ruler = False
+  Page.Continuous = False
+  Page.Values = (
+    26.458333333333330000
+    291.041666666666700000
+    26.458333333333330000
+    793.750000000000000000
+    13.229166666666670000
+    13.229166666666670000
+    0.000000000000000000)
+  PrinterSettings.Copies = 1
+  PrinterSettings.OutputBin = First
+  PrinterSettings.Duplex = False
+  PrinterSettings.FirstPage = 0
+  PrinterSettings.LastPage = 0
+  PrinterSettings.UseStandardprinter = False
+  PrinterSettings.UseCustomBinCode = False
+  PrinterSettings.CustomBinCode = 0
+  PrinterSettings.ExtendedDuplex = 0
+  PrinterSettings.UseCustomPaperCode = False
+  PrinterSettings.CustomPaperCode = 0
+  PrinterSettings.PrintMetaFile = False
+  PrinterSettings.MemoryLimit = 1000000
+  PrinterSettings.PrintQuality = 0
+  PrinterSettings.Collate = 0
+  PrinterSettings.ColorOption = 0
+  PrintIfEmpty = True
+  ReportTitle = 'Comanda Detallada'
+  SnapToGrid = True
+  Units = Pixels
+  Zoom = 100
+  PrevFormStyle = fsNormal
+  PreviewInitialState = wsMaximized
+  PreviewWidth = 500
+  PreviewHeight = 500
+  PrevInitialZoom = qrZoomToFit
+  PreviewDefaultSaveType = stPDF
+  PreviewLeft = 0
+  PreviewTop = 0
+  LabelSettings.FirstLabel = 0
+  LabelSettings.LabelCount = 0
+  PrepareAutomatically = False
+  DesignBackgroundDX = 0
+  DesignBackgroundDY = 0
+  RulerPanel = ReportDesignerForm.RulerPanel1
+  object Detailband: TQRDesignBand
+    Left = 5
+    Top = 10
+    Width = 290
+    Height = 68
+    AlignToBottom = False
+    TransparentBand = False
+    ForceNewColumn = False
+    ForceNewPage = True
+    Size.Values = (
+      179.916666666666700000
+      767.291666666666700000)
+    PreCaluculateBandHeight = False
+    KeepOnOnePage = False
+    BandType = rbDetail
+    EditorEnabled = True
+    BandNum = 0
+    object DBRichtext1: TQRDesignDBRichtext
+      Left = 4
+      Top = 5
+      Width = 277
+      Height = 53
+      Enabled = False
+      Size.Values = (
+        140.229166666666700000
+        10.583333333333330000
+        13.229166666666670000
+        732.895833333333300000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
+      Alignment = taLeftJustify
+      AutoStretch = True
+      Color = clWindow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      HiresExport = False
+      Transparent = False
+      YIncrement = 50
+      DataField = 'INFO_COMANDA'
+      DataSet = RuntimeDatamodule.COMANDA_DETALLADA
+      EditorEnabled = True
+      FixBottomPosition = False
+      StretchHeightWithBand = False
+    end
+  end
+end
+object TPropertyAddons
+end
