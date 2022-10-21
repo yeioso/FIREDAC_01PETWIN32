@@ -1,0 +1,16 @@
+object FrMain: TFrMain
+  Left = 0
+  Top = 0
+  Caption = 'FrMain'
+  ClientHeight = 484
+  ClientWidth = 796
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  FormStyle = fsMDIForm
+  OnCreate = FormCreate
+  TextHeight = 15
+end

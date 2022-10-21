@@ -1,0 +1,240 @@
+unit uTable_Info;
+
+interface
+Uses
+  System.Classes,
+  System.Generics.Collections;
+
+Const
+  Table000_Barrio                = 000;
+  Table001_Tipo_Item             = 001;
+  Table002_Item                  = 002;
+
+  Table010_Empresa               = 010;
+  Table011_Empresa_Accion        = 011;
+
+  Table012_CFG                   = 012;
+  Table013_CFG_String            = 013;
+  Table014_CFG_Double            = 014;
+
+  Table016_Perfil                = 016;
+  Table017_Perfil_Opcion         = 017;
+  Table018_Perfil_Accion         = 018;
+
+  Table020_Usuario               = 020;
+  Table030_Documento             = 030;
+
+  Table040_Producto              = 040;
+  Table041_Producto_LP           = 041;
+  Table042_Producto_Stock        = 042;
+  Table043_Producto_Receta       = 043;
+  Table044_Producto_Galeria      = 044;
+  Table045_Producto_Factor       = 045;
+  Table046_Producto_Padre        = 046;
+  Table047_Producto_CFG          = 047;
+  Table049_Producto_Accion       = 049;
+
+
+  Table050_Espacio               = 050;
+  Table051_Posicion              = 051;
+
+  Table056_Turno_Enc             = 056;
+  Table057_Turno_Det             = 057;
+  Table059_Turno_Accion          = 059;
+
+  Table060_Tercero               = 060;
+  Table061_Tercero_Galeria       = 061;
+  Table062_Tercero_Salario       = 062;
+  Table063_Tercero_LP            = 063;
+  Table064_Tercero_Dependencia   = 064;
+  Table065_Tercero_Item          = 065;
+  Table069_Tercero_Accion        = 069;
+
+  Table100_Movimiento_Enc        = 100;
+  Table101_Movimiento_Det        = 101;
+  Table102_Movimiento_Galeria    = 102;
+
+Type
+  TMTProperty = (
+                 mtVisible,
+                 mtMenu
+                );
+  TMTProperties = Set Of TMTProperty;
+
+  TMTArray_Str = Array Of String;
+
+  TMTInfo = Class(TObject)
+    Private
+      FId : Integer;
+      FKey : TMTArray_Str;
+      FCaption : String;
+      FTableName : String;
+      FProperties : TMTProperties;
+    Public
+      Property Id : Integer Read FId;
+      Property Key : TMTArray_Str Read FKey;
+      Property Caption : String Read FCaption;
+      Property TableName : String Read FTableName;
+      Property Properties : TMTProperties Read FProperties;
+  End;
+  TMTInfos = TList<TMTInfo>;
+
+  TMTable = Class(TObject)
+    Private
+      FItem : TMTInfos;
+      Procedure Init;
+      Procedure Add(Const pId: Integer; Const pCaption, pTablename: String; pKey: TMTArray_Str);
+      Function Get(pId: Integer): TMTInfo;
+    Public
+      Property Items[pId: Integer] : TMTInfo Read Get; Default;
+      Procedure AfterConstruction; Override;
+      Procedure BeforeDestruction; Override;
+  End;
+
+Var
+  gMTable : TMTable;
+
+
+implementation
+Uses
+  uLog,
+  uFuncion,
+  System.SysUtils,
+  System.Generics.Defaults;
+
+Procedure TMTable.AfterConstruction;
+Begin
+  Inherited;
+  Try
+    FItem := TMTInfos.Create;
+  Except
+     On E: Exception Do
+     Begin
+       uLog_Execute('TABLEINFO', ['Origen', 'TMTable.AfterConstruction', 'Error', E.Message]);
+     End;
+   End;
+End;
+
+Procedure TMTable.BeforeDestruction;
+Var
+  lItem: TMTInfo;
+Begin
+  Try
+    For lItem In FTables Do
+      lItem.Free;
+    FTables.Clear;
+    FreeAndNil(FTables);
+  Except
+    On E: Exception Do
+    Begin
+      uLog_Execute('TABLEINFO', ['Origen', 'TMTable.BeforeDestruction', 'Error', E.Message]);
+    End;
+  End;
+  Inherited;
+End;
+
+procedure TMTable.Add(Const pId: Integer; Const pCaption, pTablename: String; pKey: TMTArray_Str);
+Var
+  lItem: TMTInfo;
+begin
+  Try
+    lItem := TMTInfo.Create;
+    FItem.Add(lItem);
+    lItem.FID := pId;
+    lItem.FKey := pKey;
+    lItem.FCaption := pCaption;
+    lItem.FTablename := 'T' + Justificar(IntToStr(pId), '0', 3) + '_' +  pTablename;
+  Except
+    On E: Exception Do
+    Begin
+      uLog_Execute('TABLEINFO', ['Origen', 'TMTable.Add', 'Error', E.Message]);
+    End;
+  End;
+end;
+
+procedure TMTable.Init;
+begin
+  Try
+    Add(Table000_Barrio                , 'Barrio'                        , 'BARRIO'           , ['BARRIO_CODIGO']);
+    Add(Table001_Tipo_Item             , 'Tipo Item'                     , 'TIPO_ITEM'        , ['TIPO_ITEM_CODIGO']);
+    Add(Table002_Item                  , 'Item'                          , 'ITEM'             , ['ITEM_CODIGO']);
+
+    Add(Table010_Empresa               , 'Empresa'                       , 'EMPRESA'          , ['EMPRESA_CODIGO']);
+    Add(Table011_Empresa_Accion        , 'Empresa (Acción)'              , 'EMPRESA_ACCION'   , ['EMPRESA_CODIGO', 'ACCION_CODIGO']);
+
+    Add(Table012_CFG                   , 'Configuración'                 , 'CFG'              , ['EMPRESA_CODIGO', 'CFG_CODIGO']);
+    Add(Table013_CFG_String            , 'Configuración (String)'        , 'CFG_STRING'       , ['EMPRESA_CODIGO', 'CFG_CODIGO', 'ACCION_CODIGO']);
+    Add(Table014_CFG_Double            , 'Configuración (Double)'        , 'CFG_DOUBLE'       , ['EMPRESA_CODIGO', 'CFG_CODIGO', 'ACCION_CODIGO']);
+
+    Add(Table016_Perfil                , 'Perfil'                        , 'PERFIL'           , ['EMPRESA_CODIGO', 'PERFIL_CODIGO_']);
+    Add(Table017_Perfil_Opcion         , 'Opción'                        , 'PERFIL_OPCION'    , ['EMPRESA_CODIGO', 'PERFIL_PERFIL', 'NOMBRE']);
+    Add(Table018_Perfil_Accion         , 'Acción'                        , 'PERFIL_ACCION'    , ['EMPRESA_CODIGO', 'PERFIL_PERFIL', 'NOMBRE']);
+
+    Add(Table020_Usuario               , 'Usuario'                       , 'USUARIO'          , ['EMPRESA_CODIGO', 'USUARIO_CODIGO']);
+    Add(Table030_Documento             , 'Documento'                     , 'DOCUMENTO'        , ['EMPRESA_CODIGO', 'DOCUMENTO_CODIGO']);
+
+    Add(Table040_Producto              , 'Producto'                      , 'PRODUCTO'         , ['EMPRESA_CODIGO', 'PRODUCTO_CODIGO']);
+    Add(Table041_Producto_LP           , 'Producto (Lista de Precio)'    , 'PRODUCTO_LP'      , ['EMPRESA_CODIGO', 'PRODUCTO_CODIGO', 'LISTA_PRECIO_CODIGO']);
+    Add(Table042_Producto_Stock        , 'Producto (Stock)'              , 'PROD_STOCK'       , ['EMPRESA_CODIGO', 'PRODUCTO_CODIGO', 'STOCK_CODIGO']);
+    Add(Table043_Producto_Receta       , 'Producto (Receta)'             , 'PROD_RECETA'      , ['EMPRESA_CODIGO', 'PRODUCTO_CODIGO', 'RECETA_CODIGO']);
+    Add(Table044_Producto_Galeria      , 'Producto (Galeria)'            , 'PROD_GALERIA'     , ['EMPRESA_CODIGO', 'PRODUCTO_CODIGO', 'GALERIA_CODIGO']);
+    Add(Table045_Producto_Factor       , 'Producto (Factor)'             , 'PROD_FACTOR'      , ['EMPRESA_CODIGO', 'PRODUCTO_CODIGO', 'FACTOR_CODIGO']);
+    Add(Table046_Producto_Padre        , 'Producto (Padre)'              , 'PROD_PADRE'       , ['EMPRESA_CODIGO', 'CONCEPTO_CONCEPTO', 'PADRE_CODIGO']);
+    Add(Table047_Producto_CFG          , 'Producto (Configuración)'      , 'PROD_CFG'         , ['EMPRESA_CODIGO', 'CFG_CONCEPTO', 'PRODUCTO_CODIGO']);
+    Add(Table049_Producto_Accion       , 'Producto (Accion)'             , 'PROD_ACCION'      , ['EMPRESA_CODIGO', 'PRODUCTO_CODIGO', 'ACCION_CODIGO']);
+
+    Add(Table050_Espacio               , 'Espacio'                       , 'ESPACIO'           , ['EMPRESA_CODIGO', 'ESPACIO_CODIGO']);
+    Add(Table051_Posicion              , 'Posición'                      , 'POSICION'          , ['EMPRESA_CODIGO', 'ESPACIO_CODIGO', 'POSICION_CODIGO']);
+
+    Add(Table056_Turno_Enc             , 'Turno (Maestro)'               , 'TURNO_ENC'         , ['EMPRESA_CODIGO', 'TURNO_CODIGO']);
+    Add(Table057_Turno_Det             , 'Turno (Detalle)'               , 'TURNO_DET'         , ['EMPRESA_CODIGO', 'TURNO_CODIGO', 'CONCEPTO_CODIGO']);
+    Add(Table059_Turno_Accion          , 'Turno (Accion)'                , 'TURNO_ACCION'      , ['EMPRESA_CODIGO', 'TURNO_CODIGO', 'TURNO_CODIGO']);
+
+    Add(Table060_Tercero               , 'Tercero'                       , 'TERCERO'           , ['EMPRESA_CODIGO', 'TERCERO_CODIGO', 'SINONIMO_CODIGO']);
+    Add(Table061_Tercero_Galeria       , 'Tercero (Galeria)'             , 'TERC_GALERIA'      , ['EMPRESA_CODIGO', 'TERCERO_CODIGO', 'SINONIMO_CODIGO', 'GALERIA_CODIGO']);
+    Add(Table062_Tercero_Salario       , 'Tercero (Salario)'             , 'TERC_SALARIO'      , ['EMPRESA_CODIGO', 'TERCERO_CODIGO', 'SINONIMO_CODIGO', 'SALARIO_CODIGO']);
+    Add(Table063_Tercero_LP            , 'Tercero (L.P.)'                , 'TERC_LISTA_PRECIO' , ['EMPRESA_CODIGO', 'TERCERO_CODIGO', 'SINONIMO_CODIGO', 'LISTA_PRECIO_CODIGO']);
+    Add(Table064_Tercero_Dependencia   , 'Tercero (Dependencia)'         , 'TERC_DEPENDENCIA'  , ['EMPRESA_CODIGO', 'TERCERO_CODIGO', 'TERCERO_SINONIMO', 'TIPO_DEPENDENCIA', 'DEPENDENCIA_EMPRESA', 'DEPENDENCIA_TERCERO', 'DEPENDENCIA_SINONIMO', 'DEPENDENCIA_FECHAINI', 'DEPENDENCIA_FECHAFIN']);
+    Add(Table065_Tercero_Item          , 'Tercero (Item)'                , 'TERC_ITEM'         , ['EMPRESA_CODIGO', 'TERCERO_CODIGO', 'TERCERO_SINONIMO', 'ITEM_TIPO, ITEM_CODIGO', 'ITEM_FECHAINI', 'ITEM_FECHAFIN']);
+    Add(Table069_Tercero_Accion        , 'Tercero (Accion)'              , 'TERC_ACCION'       , ['EMPRESA_CODIGO, TERCERO_CODIGO, TERCERO_SINONIMO, ACCION_CODIGO']);
+
+    Add(Table100_Movimiento_Enc        , 'Movimiento (Maestro)'          , 'MOVTO_ENCABEZADO'  , ['EMPRESA_CODIGO', 'DOCUMENTO_CODIGO', 'NUMERO_DOCUMENTO']);
+    Add(Table101_Movimiento_Det        , 'Movimiento (Detalle)'          , 'MOVTO_DETALLE'     , ['EMPRESA_CODIGO', 'DOCUMENTO_CODIGO', 'NUMERO_DOCUMENTO', 'GALERIA_CODIGO']);
+    Add(Table102_Movimiento_Galeria    , 'Movimiento (Galeria)'          , 'MOVTO_GALERIA'     , ['EMPRESA_CODIGO', 'DOCUMENTO_CODIGO', 'NUMERO_DOCUMENTO', 'NUMERO_REGISTRO']);
+  Except
+    On E: Exception Do
+    Begin
+      uLog_Execute('TABLEINFO', ['Origen', 'TMTable.Init', 'Error', E.Message]);
+    End;
+  End;
+end;
+
+Function TMTable.Get(pId : Integer): TMTInfo;
+Var
+  lI : Integer;
+Begin
+  Try
+    lI := 0;
+    Result := Nil;
+    While (lI < FItem.Count) And (Result = Nil) Do
+    Begin
+      If FItem[lI].Id = pId Then
+        Result := FItem[pId];
+      Inc(lI);
+    End;
+  Except
+    On E: Exception Do
+    Begin
+      uLog_Execute('TABLEINFO', ['Origen', 'TMTable.Get', 'Error', E.Message]);
+    End;
+  End;
+End;
+
+Initialization
+  gMTable := TMTable.Create;
+
+Finalization
+  If Assigned(gMTable) Then
+    FreeAndNil(gMTable);
+
+end.

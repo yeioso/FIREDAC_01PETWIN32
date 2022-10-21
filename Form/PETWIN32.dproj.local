@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/04/27 13:13:01.000.216,=C:\Users\yeios\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/27 13:13:31.000.186,=C:\Users\yeios\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/05/10 08:42:24.000.030,=C:\Users\yeios\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/10 13:35:27.000.745,=C:\Users\yeios\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 11:00:32.095,=C:\Users\yeios\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 11:01:30.929,D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Form_Main.pas=C:\Users\yeios\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 11:01:30.929,D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Form_Main.dfm=C:\Users\yeios\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/21 11:01:42.533,D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\PETWIN32.dproj=C:\Users\yeios\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/21 11:02:06.907,=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 11:02:24.021,D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Form_Frame.pas=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 11:02:24.021,D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Form_Frame.dfm=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Unit1.dfm</Transaction>
+    <Transaction>2022/10/21 12:40:29.410,=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 12:41:06.764,D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Form_Tipo.pas=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 12:42:56.763,=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 12:43:20.424,D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Utils\uGlobal.pas=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 12:54:58.445,=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 12:55:59.490,D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Utils\uInfo_Table.pas=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Form\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 12:57:25.635,D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Utils\uTable_Info.pas=D:\Proyectos\DelphiXE\Apps\FIREDAC\Prod\FIREDAC_01PETWIN32\Utils\uInfo_Table.pas</Transaction>
+  </Transactions>
+</BorlandProject>

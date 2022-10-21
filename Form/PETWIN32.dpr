@@ -1,0 +1,18 @@
+program PETWIN32;
+
+uses
+  Vcl.Forms,
+  Form_Main in 'Form_Main.pas' {FrMain},
+  Form_Frame in 'Form_Frame.pas' {FrFrame: TFrame},
+  Form_Tipo in 'Form_Tipo.pas',
+  uGlobal in '..\Utils\uGlobal.pas',
+  uTable_Info in '..\Utils\uTable_Info.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrMain, FrMain);
+  Application.Run;
+end.

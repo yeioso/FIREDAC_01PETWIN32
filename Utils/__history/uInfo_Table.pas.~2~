@@ -1,0 +1,14 @@
+unit uInfo_Table;
+
+interface
+Uses
+  System.Classes,
+  System.Generics.Collections;
+
+implementation
+
+Uses
+  System.SysUtils,
+  System.Generics.Defaults;
+
+end.

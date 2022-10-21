@@ -1,0 +1,35 @@
+unit Form_Main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Form_Frame;
+
+type
+  TFrMain = class(TForm)
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+    Form_Frame : TFrFrame;
+  public
+    { Public declarations }
+
+  end;
+
+var
+  FrMain: TFrMain;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrMain.FormCreate(Sender: TObject);
+begin
+  Form_Frame := TFrFrame.Create(Self);
+  Form_Frame.Parent := Self;
+
+end;
+
+end.
