@@ -1,1 +1,0 @@
-# FIREDAC_01Lupe
